@@ -9,20 +9,20 @@ This repository contains a comprehensive Governance, Risk, and Compliance (GRC) 
 **Objective:** To identify physical, administrative, and technical vulnerabilities, calculate risk severity, and provide regulatory-aligned remediation strategies.
 
 ## 🛠️ Frameworks & Standards Applied
-* [cite_start]**ISO/IEC 27001:2022** (Information Security Management Systems) [cite: 98]
-* [cite_start]**NIST Cybersecurity Framework (CSF) v2.0** [cite: 98]
-* [cite_start]**PCI DSS v4.0** (Payment Card Industry Data Security Standard) [cite: 98]
+* **ISO/IEC 27001:2022** (Information Security Management Systems) 
+* **NIST Cybersecurity Framework (CSF) v2.0**
+* **PCI DSS v4.0** (Payment Card Industry Data Security Standard)
 
 ## 📂 Repository Contents
-* [cite_start]**`Saydalty_Risk_Register.csv`**: A detailed threat model and risk register evaluating 20+ risk scenarios across CIA (Confidentiality, Integrity, Availability) triads[cite: 74]. [cite_start]It includes likelihood and impact scoring, residual risk calculations, and actionable remediation steps mapped to specific risk owners (e.g., CTO, COO, Legal Counsel)[cite: 75, 76].
-* [cite_start]**`ISO_NIST_PCI_Mapping.csv`**: A custom compliance matrix mapping ISO 27001 Annex A controls (such as A.5.1 Policies for information security and A.8.2 Privileged access rights) directly to NIST CSF categories and PCI DSS requirements within a banking/fintech context[cite: 98, 113, 114].
+**`Saydalty_Risk_Register.csv`**: A detailed threat model and risk register evaluating 20+ risk scenarios across CIA (Confidentiality, Integrity, Availability) triads. It includes likelihood and impact scoring, residual risk calculations, and actionable remediation steps mapped to specific risk owners (e.g., CTO, COO, Legal Counsel).
+* **`ISO_NIST_PCI_Mapping.csv`**: A custom compliance matrix mapping ISO 27001 Annex A controls (such as A.5.1 Policies for information security and A.8.2 Privileged access rights) directly to NIST CSF categories and PCI DSS requirements within a banking/fintech context.
 
 ## 🚨 Key Findings & Methodologies
 The risk assessment uncovered critical vulnerabilities requiring immediate remediation, including:
-1.  [cite_start]**Data Transmission & Integrity Risks:** Identified the transmission of sensitive National IDs and transaction values in plaintext via API calls, recommending HMAC Request Signing to prevent interception and tampering[cite: 85, 86, 87].
-2.  [cite_start]**Cryptographic Weaknesses:** Highlighted the use of deprecated SHA-1 hashing and AES-128, recommending upgrades to industry-standard AES-256 to protect sensitive medical and financial data[cite: 89, 90, 91].
-3.  [cite_start]**Physical & Environmental Security:** Assessed severe environmental risks to on-premise servers (e.g., broken AC leading to potential hardware failure) and unrestricted physical access to open-plan workspaces, proposing both physical and administrative access controls[cite: 75, 76, 77].
-4.  [cite_start]**Network Architecture:** Discovered single points of failure and a lack of egress filtering or traffic monitoring, leaving the platform vulnerable to DoS attacks and data exfiltration[cite: 91, 92, 93].
+1.  **Data Transmission & Integrity Risks:** Identified the transmission of sensitive National IDs and transaction values in plaintext via API calls, recommending HMAC Request Signing to prevent interception and tampering.
+2.  **Cryptographic Weaknesses:** Highlighted the use of deprecated SHA-1 hashing and AES-128, recommending upgrades to industry-standard AES-256 to protect sensitive medical and financial data.
+3.  **Physical & Environmental Security:** Assessed severe environmental risks to on-premise servers (e.g., broken AC leading to potential hardware failure) and unrestricted physical access to open-plan workspaces, proposing both physical and administrative access controls.
+4.  **Network Architecture:** Discovered single points of failure and a lack of egress filtering or traffic monitoring, leaving the platform vulnerable to DoS attacks and data exfiltration.
 
 * Regulatory Compliance Mapping
 * Secure Software Development Lifecycle (SSDLC) Policy Enforcement
